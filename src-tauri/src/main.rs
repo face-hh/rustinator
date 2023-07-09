@@ -1,7 +1,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use std::env;
 use std::fs::File;
 use std::io::Read;
+use std::path::PathBuf;
 use std::sync::Mutex;
 
 use rand::prelude::SliceRandom;
@@ -82,8 +84,10 @@ fn reset_data(
 }
 
 fn main() {
-    let mut file =
-        File::open("W:/Codespace/rustinator/dataset/data.json").expect("Failed to open file.");
+    let mut file_path = env::current_dir().expect("Failed to get current directory");
+    file_path.push("dataset/data.json"); // Relative path to the file
+
+    let mut file = File::open(file_path).expect("Failed to open file.");
     let mut contents = String::new();
     file.read_to_string(&mut contents)
         .expect("Failed to read file.");
