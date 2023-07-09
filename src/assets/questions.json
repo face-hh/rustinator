@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "text": "Is your character American?"
+    },
+    {
+        "id": 2,
+        "text": "Is your character European?"
+    },
+    {
+        "id": 3,
+        "text": "Does your character's stage name consist of 2 letters?"
+    },
+    {
+        "id": 4,
+        "text": "Is your character a rapper?"
+    },
+    {
+        "id": 5,
+        "text": "Is your character a singer?"
+    },
+    {
+        "id": 6,
+        "text": "Does your character usually wear a hoodie?"
+    },
+    {
+        "id": 7,
+        "text": "Does your character have a face tattoo?"
+    },
+    {
+        "id": 8,
+        "text": "Does your character have a tattoo?"
+    },
+    {
+        "id": 9,
+        "text": "Does your character's stage name consist of 2 words?"
+    },
+    {
+        "id": 10,
+        "text": "Is your character known for blending multiple genres?"
+    },
+    {
+        "id": 11,
+        "text": "Did your character create a word?"
+    },
+    {
+        "id": 12,
+        "text": "Is your character considered OG in his field?"
+    },
+    {
+        "id": 12,
+        "text": "Is your character black?"
+    },
+    {
+        "id": 13,
+        "text": "Is your character white?"
+    }
+]
