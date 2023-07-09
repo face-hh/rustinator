@@ -3,6 +3,12 @@
 
 ![Example of the program running on Windows](https://github.com/face-hh/feddit/assets/69168154/0849985c-a4f0-43e1-b41f-05fcaaf810bf)
 
+## How to play
+1. Install [Rust](https://www.rust-lang.org/tools/install)
+2. Install [Tauri](https://tauri.app/)
+3. Open a `cmd`/`Terminal` in this folder.
+4. Run `cd src-tauri && cargo run`
+5. You're in!
 
 ## Algorithm
 #### Short

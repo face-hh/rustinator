@@ -3,7 +3,6 @@
 use std::env;
 use std::fs::File;
 use std::io::Read;
-use std::path::PathBuf;
 use std::sync::Mutex;
 
 use rand::prelude::SliceRandom;
