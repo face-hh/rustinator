@@ -45,14 +45,34 @@
     },
     {
         "id": 12,
-        "text": "Is your character considered OG in his field?"
-    },
-    {
-        "id": 12,
         "text": "Is your character black?"
     },
     {
         "id": 13,
         "text": "Is your character white?"
+    },
+    {
+        "id": 14,
+        "text": "Is your character gay?"        
+    },
+    {
+        "id": 15,
+        "text": "Was your character born in London?"
+    },
+    {
+        "id": 16,
+        "text": "Is your charcter above the age of 30?"
+    },
+    {
+        "id": 17,
+        "text": "Did your character have blond hair at one point?"
+    },
+    {
+        "id": 18,
+        "text": "Was your character born in the United States?"
+    },
+    {
+        "id": 19,
+        "text": "Is your character below the age of 25?"
     }
 ]
