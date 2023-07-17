@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expand Page</title>
+</head>
+
+<body>
+    <button class="nav" onclick="goBack()">Back</button>
+
+    <div class="expand_info">
+        <div class="chatBubble">
+            <span id="text">What character do you want to add to the dataset?</span>
+        </div>
+        <div class="answers">
+            <input class="question" id="character" placeholder="Character name" autocomplete="off">
+            <select class="hidden" id="questions" multiple>
+            </select>
+            <input class="question hidden" id="addQuestion" placeholder="Character question" autocomplete="off">
+            <button onclick="random()" class="random" id="random">
+                <svg fill="#ffffff" height="1.2em" width="1.2em" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M21.333,149.327H64c18.773,0,37.227,4.928,53.333,14.272c3.371,1.963,7.061,2.88,10.688,2.88
+                    c7.36,0,14.528-3.819,18.475-10.624c5.931-10.197,2.432-23.253-7.744-29.163C116.117,113.594,90.283,106.66,64,106.66H21.333
+                    C9.536,106.66,0,116.218,0,127.994S9.536,149.327,21.333,149.327z" />
+                                <path d="M320,149.327h42.667v64c0,8.192,4.715,15.68,12.075,19.221c2.965,1.408,6.123,2.112,9.259,2.112
+                    c4.757,0,9.472-1.6,13.333-4.672L504,144.655c5.056-4.053,8-10.176,8-16.661c0-6.485-2.944-12.608-8-16.661L397.333,25.999
+                    c-6.421-5.12-15.232-6.101-22.592-2.56s-12.075,11.029-12.075,19.221v64H320c-82.325,0-149.333,66.987-149.333,149.333
+                    c0,58.816-47.851,106.667-106.667,106.667H21.333C9.536,362.66,0,372.218,0,383.994s9.536,21.333,21.333,21.333H64
+                    c82.325,0,149.333-66.987,149.333-149.333C213.333,197.178,261.184,149.327,320,149.327z" />
+                                <path
+                                    d="M504,367.336l-106.667-85.333c-6.421-5.141-15.232-6.123-22.592-2.581c-7.36,3.563-12.075,11.029-12.075,19.243v64H320
+                    c-21.077,0-41.472-6.144-58.965-17.771c-9.856-6.485-23.061-3.861-29.568,5.973c-6.528,9.813-3.861,23.061,5.952,29.568
+                    c24.512,16.277,53.056,24.896,82.581,24.896h42.667v64c0,8.192,4.715,15.68,12.075,19.221c2.965,1.408,6.123,2.112,9.259,2.112
+                    c4.757,0,9.472-1.6,13.333-4.672L504,400.659c5.056-4.053,8-10.197,8-16.661C512,377.512,509.056,371.368,504,367.336z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+        </div>
+        </button>
+
+        <div class="container" id="expand">
+            <button onclick="next()" id="next">Next</button>
+            <button class="hidden" onclick="addQuestion()" id="addBtn">Add Question</button>
+            <button class="hidden" id="save" onclick="save()">Save</button>
+            <button class="hidden" onclick="add()" id="add">Add</button>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,22 +1,25 @@
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-
 use std::env;
+use std::fs::write;
 use std::fs::File;
 use std::io::Read;
-use std::sync::Mutex;
+use std::path::PathBuf;
+use std::sync::{Arc, Mutex};
 
+use once_cell::sync::OnceCell;
 use rand::prelude::SliceRandom;
 use serde::{Deserialize, Serialize};
 use tauri::State;
 use tauri::*;
 
 static mut ALREADY_ASKED: Vec<i32> = Vec::new();
+static DATASET_PATH: OnceCell<String> = OnceCell::new();
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 struct Persons {
     name: String,
     questions: Vec<i32>,
 }
+
 #[derive(Serialize, Deserialize, Clone, Debug)]
 struct DataElem {
     persons: Vec<Persons>,
@@ -82,11 +85,46 @@ fn reset_data(
     Ok(Some(game_dataset.lock().unwrap().clone()))
 }
 
+#[tauri::command]
+fn save_data(data: serde_json::Value, questions_to_add: String, game_dataset: State<Mutex<DataElem>>) -> Result<()> {
+    let dataset_path = DATASET_PATH.get().expect("Failed to get dataset path");
+
+    let mut game_dataset = game_dataset.lock().unwrap();
+
+    // Deserialize the `Value` into `Persons` struct
+    let person: Persons = serde_json::from_value(data).unwrap();
+
+    game_dataset.persons.push(person);
+
+    let serialized = serde_json::to_string_pretty(&*game_dataset).unwrap();
+    write(dataset_path, serialized).expect("Failed to write to file");
+
+    let questions_path: PathBuf = ["../src", "assets", "questions.json"].iter().collect();
+
+    let questions_json =
+        std::fs::read_to_string(&questions_path).expect("Failed to read questions file");
+
+    let questions: Arc<Vec<serde_json::Value>> =
+        Arc::new(serde_json::from_str(&questions_json).unwrap());
+
+    let new_questions: Vec<serde_json::Value> = serde_json::from_str(&questions_to_add).unwrap();
+
+    let mut updated_questions = questions.iter().cloned().collect::<Vec<_>>();
+    updated_questions.extend(new_questions);
+
+    let updated_questions_str = serde_json::to_string_pretty(&updated_questions).unwrap();
+    write(&questions_path, updated_questions_str).expect("Failed to write questions to file");
+
+    Ok(())
+}
+
 fn main() {
     let mut file_path = env::current_dir().expect("Failed to get current directory");
     file_path.push("dataset/data.json"); // Relative path to the file
 
-    let mut file = File::open(file_path).expect("Failed to open file.");
+    DATASET_PATH.set(file_path.display().to_string()).unwrap();
+
+    let mut file = File::open(&file_path).expect("Failed to open file.");
     let mut contents = String::new();
     file.read_to_string(&mut contents)
         .expect("Failed to read file.");
@@ -99,7 +137,12 @@ fn main() {
     tauri::Builder::default()
         .manage(game_dataset)
         .manage(dataset)
-        .invoke_handler(tauri::generate_handler![guess, choose_question, reset_data])
+        .invoke_handler(tauri::generate_handler![
+            guess,
+            choose_question,
+            reset_data,
+            save_data
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
