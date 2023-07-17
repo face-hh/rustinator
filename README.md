@@ -1,7 +1,7 @@
 # Rustinator
 [Akinator](https://akinator.com/) clone written in [Rust](https://www.rust-lang.org/) + [Tauri](https://tauri.app/) in 2 days
 
-![Example of the program running on Windows](https://github.com/face-hh/feddit/assets/69168154/0849985c-a4f0-43e1-b41f-05fcaaf810bf)
+![Example of the program running on Windows](src/assets/screenshot.png)
 
 ## How to play
 1. Install [Rust](https://www.rust-lang.org/tools/install)
@@ -20,11 +20,11 @@ The current algorithm works by randomly selecting a question and asking the user
 The current major issue is the fact that the [dataset](https://github.com/face-hh/rustinator/tree/main/src-tauri/dataset/data.json) is very small.
 
 - Pull requests are VERY appreciated in order to increase the dataset!
-  - To do that, choose a personality that is not inside the dataset already.
-  - Create an object inside `data.json` with the `name` set to the personality.
-  - Navigate over to `src/assets/questions.json` and add your desired questions.
-  - Back to `data.json`, add a field called `questions` which will be `[]` (Array).
-  - Include the question ID inside the `[]`, example: `questions: [34]`
+  - Click the `Expand dataset` button in the left top corner
+  - Choose a character to add
+  - Select all questions that apply to the character
+  - Add custom question(s) or save to the dataset
+  - Open a pull request with the changed dataset
 
 ## What's the point?
 Content.

@@ -1,78 +1,78 @@
 [
-    {
-        "id": 1,
-        "text": "Is your character American?"
-    },
-    {
-        "id": 2,
-        "text": "Is your character European?"
-    },
-    {
-        "id": 3,
-        "text": "Does your character's stage name consist of 2 letters?"
-    },
-    {
-        "id": 4,
-        "text": "Is your character a rapper?"
-    },
-    {
-        "id": 5,
-        "text": "Is your character a singer?"
-    },
-    {
-        "id": 6,
-        "text": "Does your character usually wear a hoodie?"
-    },
-    {
-        "id": 7,
-        "text": "Does your character have a face tattoo?"
-    },
-    {
-        "id": 8,
-        "text": "Does your character have a tattoo?"
-    },
-    {
-        "id": 9,
-        "text": "Does your character's stage name consist of 2 words?"
-    },
-    {
-        "id": 10,
-        "text": "Is your character known for blending multiple genres?"
-    },
-    {
-        "id": 11,
-        "text": "Did your character create a word?"
-    },
-    {
-        "id": 12,
-        "text": "Is your character black?"
-    },
-    {
-        "id": 13,
-        "text": "Is your character white?"
-    },
-    {
-        "id": 14,
-        "text": "Is your character gay?"        
-    },
-    {
-        "id": 15,
-        "text": "Was your character born in London?"
-    },
-    {
-        "id": 16,
-        "text": "Is your charcter above the age of 30?"
-    },
-    {
-        "id": 17,
-        "text": "Did your character have blond hair at one point?"
-    },
-    {
-        "id": 18,
-        "text": "Was your character born in the United States?"
-    },
-    {
-        "id": 19,
-        "text": "Is your character below the age of 25?"
-    }
+  {
+    "id": 1,
+    "text": "Is your character American?"
+  },
+  {
+    "id": 2,
+    "text": "Is your character European?"
+  },
+  {
+    "id": 3,
+    "text": "Does your character's stage name consist of 2 letters?"
+  },
+  {
+    "id": 4,
+    "text": "Is your character a rapper?"
+  },
+  {
+    "id": 5,
+    "text": "Is your character a singer?"
+  },
+  {
+    "id": 6,
+    "text": "Does your character usually wear a hoodie?"
+  },
+  {
+    "id": 7,
+    "text": "Does your character have a face tattoo?"
+  },
+  {
+    "id": 8,
+    "text": "Does your character have a tattoo?"
+  },
+  {
+    "id": 9,
+    "text": "Does your character's stage name consist of 2 words?"
+  },
+  {
+    "id": 10,
+    "text": "Is your character known for blending multiple genres?"
+  },
+  {
+    "id": 11,
+    "text": "Did your character create a word?"
+  },
+  {
+    "id": 12,
+    "text": "Is your character black?"
+  },
+  {
+    "id": 13,
+    "text": "Is your character white?"
+  },
+  {
+    "id": 14,
+    "text": "Is your character gay?"
+  },
+  {
+    "id": 15,
+    "text": "Was your character born in London?"
+  },
+  {
+    "id": 16,
+    "text": "Is your charcter above the age of 30?"
+  },
+  {
+    "id": 17,
+    "text": "Did your character have blond hair at one point?"
+  },
+  {
+    "id": 18,
+    "text": "Was your character born in the United States?"
+  },
+  {
+    "id": 19,
+    "text": "Is your character below the age of 25?"
+  }
 ]
